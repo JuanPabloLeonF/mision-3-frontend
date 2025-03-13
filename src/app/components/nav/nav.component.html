@@ -1,0 +1,23 @@
+@if(closeNav()) {
+    <nav>
+        <img (click)="closeNavSection()" src="close.svg" alt="cerrar">
+        <form [formGroup]="formGroup" (ngSubmit)="onSumit()">
+            <label for="longitude">
+                <span [className]="inputFocus.longitude ? 'inputFocus' : ''">longitud</span>
+                <input type="text" id="longitude" name="longitude" formControlName="longitude">
+            </label>
+            <label for="latitude">
+                <span [className]="inputFocus.latitude ? 'inputFocus' : ''">latitud</span>
+                <input type="text" id="latitude" name="latitude" formControlName="latitude">
+            </label>
+            <label for="timezone">
+                <span [className]="inputFocus.timezone ? 'inputFocus' : ''">timezone</span>
+                <input type="text" id="timezone" name="timezone" formControlName="timezone">
+            </label>
+            <div>
+                <button (click)="getLocation()" type="button">Ubicación actual</button>
+                <button type="submit">Buscar</button>
+            </div>
+        </form>
+    </nav>
+}

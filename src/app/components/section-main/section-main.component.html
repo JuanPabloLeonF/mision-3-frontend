@@ -1,0 +1,26 @@
+<section>
+    <div class="buttoms-type-weather">
+        <h1>Pronostico del clima</h1>
+        <button (click)="seletedWeatherType('sunny')" type="button">soleado</button>
+        <button (click)="seletedWeatherType('rainy')" type="button">lluvioso</button>
+        <button (click)="seletedWeatherType('cloudy')" type="button">nublado</button>
+    </div>
+    <div class="contaner-display">
+        <div class="container-current-weather">
+            <h2>clima de hoy</h2>
+            <div class="current-weather">
+                <img src="weather.svg" alt="clima">
+                <p>{{currentWeather.temperature}}</p>
+                <p>{{currentWeather.weather}}</p>
+            </div>
+        </div>
+        <div class="container-forecast-weather">
+            <h2>Pronostico semanal</h2>
+            <div class="forecast-weather">
+                <div class="container-graph">
+                    <div #plotly ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
