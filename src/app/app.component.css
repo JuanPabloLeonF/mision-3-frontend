@@ -17,6 +17,7 @@ main > img {
     cursor: pointer;
     filter: invert(1);
     rotate: 180deg;
+    z-index: 4;
 }
 
 main div {
